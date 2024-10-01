@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="red">#D1193E</color>
+    <color name="blue">#1A66FF</color>
+    <color name="sea_blue">#00aeff</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="light_blue_900">#FF01579B</color>
+    <color name="light_blue_A200">#FF40C4FF</color>
+    <color name="light_blue_A400">#FF00B0FF</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="colorPurple">#332FA2</color>
+    <color name="gray">#828385</color>
+    <color name="gris_light">#e1dfe1</color>
+    <color name="colorAccent">#d81b60</color>
+    <color name="colorPrimaryDark">#00574b</color>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorTransparentWhile">#cccccc</color>
+    <color name="light_grey">#6A686A</color>
+    <color name="chocalaty">#4B4850</color>
+    <color name="sea_green">#2E8B57</color>
+    <color name="aqua">#B8E7EA</color>
+    <color name="red1">#FF0000</color>
+    <color name="red_light">#EE3E38</color>
+    <color name="red_light_light">#F86E51</color>
+    <color name="orange">#F4450F</color>
+    <color name="orange_light">#D6552A</color>
+    <color name="orange_light_light">#F8753C</color>
+    <color name="yellow">#FFB900</color>
+    <color name="yellow_light">#FFDE00</color>
+    <color name="yellow_light_light">#F6D852</color>
+    <color name="green">#5AA50F</color>
+    <color name="green_light">#9DB300</color>
+    <color name="green_light_light">#BAC600</color>
+    <color name="blue1">#0001B1</color>
+    <color name="blue_light">#1974D3</color>
+    <color name="blue_light_light">#53CCEC</color>
+    <color name="violet">#3A0751</color>
+    <color name="violet_light">#660F56</color>
+    <color name="violet_light_light">#8B0D88</color>
+    <color name="brown">#731C13</color>
+    <color name="brown_light">#63371E</color>
+    <color name="brown_light_light">#7B4425</color>
+    <color name="cream">#FFCC98</color>
+    <color name="cream_light">#FFE6B6</color>
+    <color name="cream_light_light">#FFF7D9</color>
+    <color name="pink">#F765A3</color>
+    <color name="pink_light">#FFA4B6</color>
+    <color name="pink_light_light">#F9D1D1</color>
+    <color name="black">#000000</color>
+    <color name="black_light">#4B4B4B</color>
+    <color name="black_light_light">#C4C4C4</color>
+    <color name="purple">#561496</color>
+    <color name="purple_light">#8A00FF</color>
+    <color name="purple_light_light">#8A3BC0</color>
+    <color name="neon">#14F2E0</color>
+    <color name="neon_light">#A6FAEC</color>
+    <color name="white">#FFFFFF</color>
+    <color name="transparent">#00000000</color>
+    <array name="demo_colors">
+        <item>@color/red1</item>
+        <item>@color/red_light</item>
+        <item>@color/red_light_light</item>
+        <item>@color/orange</item>
+        <item>@color/orange_light</item>
+        <item>@color/orange_light_light</item>
+        <item>@color/yellow</item>
+        <item>@color/yellow_light</item>
+        <item>@color/yellow_light_light</item>
+        <item>@color/green</item>
+        <item>@color/green_light</item>
+        <item>@color/green_light_light</item>
+        <item>@color/sea_blue</item>
+        <item>@color/blue1</item>
+        <item>@color/blue_light</item>
+        <item>@color/blue_light_light</item>
+        <item>@color/violet</item>
+        <item>@color/violet_light</item>
+        <item>@color/violet_light_light</item>
+        <item>@color/brown</item>
+        <item>@color/brown_light</item>
+        <item>@color/brown_light_light</item>
+        <item>@color/cream</item>
+        <item>@color/cream_light</item>
+        <item>@color/cream_light_light</item>
+        <item>@color/pink</item>
+        <item>@color/pink_light</item>
+        <item>@color/pink_light_light</item>
+        <item>@color/purple</item>
+        <item>@color/purple_light</item>
+        <item>@color/purple_light_light</item>
+        <item>@color/black</item>
+        <item>@color/black_light</item>
+        <item>@color/black_light_light</item>
+        <item>@color/neon</item>
+        <item>@color/neon_light</item>
+        <item>@color/white</item>
+        <item>@color/transparent</item>
+    </array>
+</resources>

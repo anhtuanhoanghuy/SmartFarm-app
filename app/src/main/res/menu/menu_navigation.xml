@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/home_tab"
+        android:title="Trang chủ"
+        android:icon="@drawable/home_icon"></item>
+    <item android:id="@+id/supervise_tab"
+        android:title="Giám sát"
+        android:icon="@drawable/supervise_icon"></item>
+    <item android:id="@+id/auto_tab"
+        android:title="Cấu hình"
+        android:icon="@drawable/auto_icon"></item>
+    <item android:id="@+id/person_tab"
+        android:title="Tài khoản"
+        android:icon="@drawable/person_icon"></item>
+</menu>

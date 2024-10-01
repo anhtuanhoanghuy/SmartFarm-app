@@ -1,0 +1,1838 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    android:id="@+id/swipe_layout_3"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".AutoTab">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Cấu hình tự động"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold"></TextView>
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></com.google.android.material.divider.MaterialDivider>
+        </LinearLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <com.google.android.flexbox.FlexboxLayout
+                    android:id="@+id/fan_dropdown_bttn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:orientation="horizontal"
+                    app:flexDirection="row"
+                    app:justifyContent="space_between">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Quạt làm mát"
+                        android:textSize="20dp"></TextView>
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/dropdown_icon"></ImageView>
+                </com.google.android.flexbox.FlexboxLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fan_dropdown"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:backgroundTint="@color/white"
+                    app:cardCornerRadius="10dp"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.flexbox.FlexboxLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="15dp"
+                            android:orientation="horizontal"
+                            app:flexDirection="row"
+                            app:justifyContent="space_between"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/weather_info_label">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Đặt giá trị biên"
+                                android:textSize="18dp"></TextView>
+
+                            <Switch
+                                android:id="@+id/fan_bttn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:thumb="@drawable/thumb"
+                                android:track="@drawable/track"></Switch>
+                        </com.google.android.flexbox.FlexboxLayout>
+
+                        <com.google.android.flexbox.FlexboxLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="15dp"
+                            android:orientation="horizontal"
+                            app:flexDirection="row"
+                            app:justifyContent="space_between"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/weather_info_label">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Nhiệt độ bật"
+                                android:textSize="16dp"></TextView>
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Nhiệt độ tắt"
+                                android:textSize="16dp"></TextView>
+                        </com.google.android.flexbox.FlexboxLayout>
+
+                        <com.google.android.flexbox.FlexboxLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="15dp"
+                            android:orientation="horizontal"
+                            app:flexDirection="row"
+                            app:justifyContent="space_between"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/weather_info_label">
+
+                            <EditText
+                                android:id="@+id/fan_onValue"
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="25dp"
+                                android:gravity="center"></EditText>
+
+                            <EditText
+                                android:id="@+id/fan_offValue"
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="25dp"
+                                android:gravity="center"></EditText>
+                        </com.google.android.flexbox.FlexboxLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:text="Lặp lại theo giờ"
+                            android:textSize="18dp"></TextView>
+
+                        <com.google.android.flexbox.FlexboxLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="15dp"
+                            android:orientation="horizontal"
+                            app:flexDirection="row"
+                            app:justifyContent="space_between"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/weather_info_label">
+                            <Switch
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:thumb="@drawable/thumb"
+                                android:track="@drawable/track"
+                                android:visibility="invisible"></Switch>
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Thời gian bật"
+                                android:textSize="16dp"></TextView>
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Thời gian tắt"
+                                android:textSize="16dp"></TextView>
+                        </com.google.android.flexbox.FlexboxLayout>
+
+                        <com.google.android.flexbox.FlexboxLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="15dp"
+                            android:orientation="horizontal"
+                            app:flexDirection="row"
+                            app:justifyContent="space_between"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/weather_info_label">
+
+                            <Switch
+                                android:id="@+id/fan_timer1_bttn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:thumb="@drawable/thumb"
+                                android:track="@drawable/track"></Switch>
+
+                            <EditText
+                                android:id="@+id/fan_timer1_on"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="25dp"
+                                android:gravity="center"></EditText>
+
+                            <EditText
+                                android:id="@+id/fan_timer1_off"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="25dp"
+                                android:gravity="center"></EditText>
+                        </com.google.android.flexbox.FlexboxLayout>
+
+                        <com.google.android.flexbox.FlexboxLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="15dp"
+                            android:orientation="horizontal"
+                            app:flexDirection="row"
+                            app:justifyContent="space_between"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/weather_info_label">
+
+                            <Switch
+                                android:id="@+id/fan_timer2_bttn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:thumb="@drawable/thumb"
+                                android:track="@drawable/track"></Switch>
+
+                            <EditText
+                                android:id="@+id/fan_timer2_on"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="25dp"
+                                android:gravity="center"></EditText>
+
+                            <EditText
+                                android:id="@+id/fan_timer2_off"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="25dp"
+                                android:gravity="center"></EditText>
+                        </com.google.android.flexbox.FlexboxLayout>
+
+                        <com.google.android.flexbox.FlexboxLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="15dp"
+                            android:orientation="horizontal"
+                            app:flexDirection="row"
+                            app:justifyContent="space_between"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/weather_info_label">
+
+                            <Switch
+                                android:id="@+id/fan_timer3_bttn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:thumb="@drawable/thumb"
+                                android:track="@drawable/track"></Switch>
+
+                            <EditText
+                                android:id="@+id/fan_timer3_on"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="25dp"
+                                android:gravity="center"></EditText>
+
+                            <EditText
+                                android:id="@+id/fan_timer3_off"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="25dp"
+                                android:gravity="center"></EditText>
+                        </com.google.android.flexbox.FlexboxLayout>
+                        <Button
+                            android:id="@+id/fan_timer_save_bttn"
+                            android:layout_width="170dp"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:backgroundTint="@color/sea_green"
+                            android:textSize="20dp"
+                            android:text="Lưu thay đổi"
+                            android:layout_gravity="center"></Button>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"></com.google.android.material.divider.MaterialDivider>
+                <com.google.android.flexbox.FlexboxLayout
+                    android:id="@+id/cool_dropdown_bttn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:orientation="horizontal"
+                    app:flexDirection="row"
+                    app:justifyContent="space_between">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dàn lạnh"
+                        android:textSize="20dp"></TextView>
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/dropdown_icon"></ImageView>
+                </com.google.android.flexbox.FlexboxLayout>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cool_dropdown"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:backgroundTint="@color/white"
+                    app:cardCornerRadius="10dp"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.flexbox.FlexboxLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="15dp"
+                            android:orientation="horizontal"
+                            app:flexDirection="row"
+                            app:justifyContent="space_between"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/weather_info_label">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Đặt giá trị biên"
+                                android:textSize="18dp"></TextView>
+
+                            <Switch
+                                android:id="@+id/cool_bttn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:thumb="@drawable/thumb"
+                                android:track="@drawable/track"></Switch>
+                        </com.google.android.flexbox.FlexboxLayout>
+
+                        <com.google.android.flexbox.FlexboxLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="15dp"
+                            android:orientation="horizontal"
+                            app:flexDirection="row"
+                            app:justifyContent="space_between"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/weather_info_label">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Nhiệt độ bật"
+                                android:textSize="16dp"></TextView>
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Nhiệt độ tắt"
+                                android:textSize="16dp"></TextView>
+                        </com.google.android.flexbox.FlexboxLayout>
+
+                        <com.google.android.flexbox.FlexboxLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="15dp"
+                            android:orientation="horizontal"
+                            app:flexDirection="row"
+                            app:justifyContent="space_between"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/weather_info_label">
+
+                            <EditText
+                                android:id="@+id/cool_onValue"
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="25dp"
+                                android:gravity="center"></EditText>
+
+                            <EditText
+                                android:id="@+id/cool_offValue"
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="25dp"
+                                android:gravity="center"></EditText>
+                        </com.google.android.flexbox.FlexboxLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:text="Lặp lại theo giờ"
+                            android:textSize="18dp"></TextView>
+
+                        <com.google.android.flexbox.FlexboxLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="15dp"
+                            android:orientation="horizontal"
+                            app:flexDirection="row"
+                            app:justifyContent="space_between"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/weather_info_label">
+                            <Switch
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:thumb="@drawable/thumb"
+                                android:track="@drawable/track"
+                                android:visibility="invisible"></Switch>
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Thời gian bật"
+                                android:textSize="16dp"></TextView>
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Thời gian tắt"
+                                android:textSize="16dp"></TextView>
+                        </com.google.android.flexbox.FlexboxLayout>
+
+                        <com.google.android.flexbox.FlexboxLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="15dp"
+                            android:orientation="horizontal"
+                            app:flexDirection="row"
+                            app:justifyContent="space_between"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/weather_info_label">
+
+                            <Switch
+                                android:id="@+id/cool_timer1_bttn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:thumb="@drawable/thumb"
+                                android:track="@drawable/track"></Switch>
+
+                            <EditText
+                                android:id="@+id/cool_timer1_on"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="25dp"
+                                android:gravity="center"></EditText>
+
+                            <EditText
+                                android:id="@+id/cool_timer1_off"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="25dp"
+                                android:gravity="center"></EditText>
+                        </com.google.android.flexbox.FlexboxLayout>
+
+                        <com.google.android.flexbox.FlexboxLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="15dp"
+                            android:orientation="horizontal"
+                            app:flexDirection="row"
+                            app:justifyContent="space_between"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/weather_info_label">
+
+                            <Switch
+                                android:id="@+id/cool_timer2_bttn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:thumb="@drawable/thumb"
+                                android:track="@drawable/track"></Switch>
+
+                            <EditText
+                                android:id="@+id/cool_timer2_on"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="25dp"
+                                android:gravity="center"></EditText>
+
+                            <EditText
+                                android:id="@+id/cool_timer2_off"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="25dp"
+                                android:gravity="center"></EditText>
+                        </com.google.android.flexbox.FlexboxLayout>
+
+                        <com.google.android.flexbox.FlexboxLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="15dp"
+                            android:orientation="horizontal"
+                            app:flexDirection="row"
+                            app:justifyContent="space_between"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/weather_info_label">
+
+                            <Switch
+                                android:id="@+id/cool_timer3_bttn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:thumb="@drawable/thumb"
+                                android:track="@drawable/track"></Switch>
+
+                            <EditText
+                                android:id="@+id/cool_timer3_on"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="25dp"
+                                android:gravity="center"></EditText>
+
+                            <EditText
+                                android:id="@+id/cool_timer3_off"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="25dp"
+                                android:gravity="center"></EditText>
+                        </com.google.android.flexbox.FlexboxLayout>
+                        <Button
+                            android:id="@+id/cool_timer_save_bttn"
+                            android:layout_width="170dp"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:backgroundTint="@color/sea_green"
+                            android:textSize="20dp"
+                            android:text="Lưu thay đổi"
+                            android:layout_gravity="center"></Button>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"></com.google.android.material.divider.MaterialDivider>
+                <com.google.android.flexbox.FlexboxLayout
+                    android:id="@+id/frost_dropdown_bttn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:orientation="horizontal"
+                    app:flexDirection="row"
+                    app:justifyContent="space_between">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Phun sương"
+                        android:textSize="20dp"></TextView>
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/dropdown_icon"></ImageView>
+                </com.google.android.flexbox.FlexboxLayout>
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/frost_dropdown"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:backgroundTint="@color/white"
+                    app:cardCornerRadius="10dp"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.flexbox.FlexboxLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="15dp"
+                            android:orientation="horizontal"
+                            app:flexDirection="row"
+                            app:justifyContent="space_between"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/weather_info_label">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Đặt giá trị biên"
+                                android:textSize="18dp"></TextView>
+
+                            <Switch
+                                android:id="@+id/frost_bttn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:thumb="@drawable/thumb"
+                                android:track="@drawable/track"></Switch>
+                        </com.google.android.flexbox.FlexboxLayout>
+
+                        <com.google.android.flexbox.FlexboxLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="15dp"
+                            android:orientation="horizontal"
+                            app:flexDirection="row"
+                            app:justifyContent="space_between"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/weather_info_label">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Độ ẩm không khí bật"
+                                android:textSize="16dp"></TextView>
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Độ ẩm không khí tắt"
+                                android:textSize="16dp"></TextView>
+                        </com.google.android.flexbox.FlexboxLayout>
+
+                        <com.google.android.flexbox.FlexboxLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="15dp"
+                            android:orientation="horizontal"
+                            app:flexDirection="row"
+                            app:justifyContent="space_between"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/weather_info_label">
+
+                            <EditText
+                                android:id="@+id/frost_onValue"
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="25dp"
+                                android:gravity="center"></EditText>
+
+                            <EditText
+                                android:id="@+id/frost_offValue"
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="25dp"
+                                android:gravity="center"></EditText>
+                        </com.google.android.flexbox.FlexboxLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:text="Lặp lại theo giờ"
+                            android:textSize="18dp"></TextView>
+
+                        <com.google.android.flexbox.FlexboxLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="15dp"
+                            android:orientation="horizontal"
+                            app:flexDirection="row"
+                            app:justifyContent="space_between"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/weather_info_label">
+                            <Switch
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:thumb="@drawable/thumb"
+                                android:track="@drawable/track"
+                                android:visibility="invisible"></Switch>
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Thời gian bật"
+                                android:textSize="16dp"></TextView>
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Thời gian tắt"
+                                android:textSize="16dp"></TextView>
+                        </com.google.android.flexbox.FlexboxLayout>
+
+                        <com.google.android.flexbox.FlexboxLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="15dp"
+                            android:orientation="horizontal"
+                            app:flexDirection="row"
+                            app:justifyContent="space_between"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/weather_info_label">
+
+                            <Switch
+                                android:id="@+id/frost_timer1_bttn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:thumb="@drawable/thumb"
+                                android:track="@drawable/track"></Switch>
+
+                            <EditText
+                                android:id="@+id/frost_timer1_on"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="25dp"
+                                android:gravity="center"></EditText>
+
+                            <EditText
+                                android:id="@+id/frost_timer1_off"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="25dp"
+                                android:gravity="center"></EditText>
+                        </com.google.android.flexbox.FlexboxLayout>
+
+                        <com.google.android.flexbox.FlexboxLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="15dp"
+                            android:orientation="horizontal"
+                            app:flexDirection="row"
+                            app:justifyContent="space_between"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/weather_info_label">
+
+                            <Switch
+                                android:id="@+id/frost_timer2_bttn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:thumb="@drawable/thumb"
+                                android:track="@drawable/track"></Switch>
+
+                            <EditText
+                                android:id="@+id/frost_timer2_on"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="25dp"
+                                android:gravity="center"></EditText>
+
+                            <EditText
+                                android:id="@+id/frost_timer2_off"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="25dp"
+                                android:gravity="center"></EditText>
+                        </com.google.android.flexbox.FlexboxLayout>
+
+                        <com.google.android.flexbox.FlexboxLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="15dp"
+                            android:orientation="horizontal"
+                            app:flexDirection="row"
+                            app:justifyContent="space_between"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/weather_info_label">
+
+                            <Switch
+                                android:id="@+id/frost_timer3_bttn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:thumb="@drawable/thumb"
+                                android:track="@drawable/track"></Switch>
+
+                            <EditText
+                                android:id="@+id/frost_timer3_on"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="25dp"
+                                android:gravity="center"></EditText>
+
+                            <EditText
+                                android:id="@+id/frost_timer3_off"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="25dp"
+                                android:gravity="center"></EditText>
+                        </com.google.android.flexbox.FlexboxLayout>
+                        <Button
+                            android:id="@+id/frost_timer_save_bttn"
+                            android:layout_width="170dp"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:backgroundTint="@color/sea_green"
+                            android:textSize="20dp"
+                            android:text="Lưu thay đổi"
+                            android:layout_gravity="center"></Button>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"></com.google.android.material.divider.MaterialDivider>
+                <com.google.android.flexbox.FlexboxLayout
+                    android:id="@+id/water_dropdown_bttn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:orientation="horizontal"
+                    app:flexDirection="row"
+                    app:justifyContent="space_between">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tưới nước"
+                        android:textSize="20dp"></TextView>
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/dropdown_icon"></ImageView>
+                </com.google.android.flexbox.FlexboxLayout>
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/water_dropdown"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:backgroundTint="@color/white"
+                    app:cardCornerRadius="10dp"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.flexbox.FlexboxLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="15dp"
+                            android:orientation="horizontal"
+                            app:flexDirection="row"
+                            app:justifyContent="space_between"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/weather_info_label">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Đặt giá trị biên"
+                                android:textSize="18dp"></TextView>
+
+                            <Switch
+                                android:id="@+id/water_bttn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:thumb="@drawable/thumb"
+                                android:track="@drawable/track"></Switch>
+                        </com.google.android.flexbox.FlexboxLayout>
+
+                        <com.google.android.flexbox.FlexboxLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="15dp"
+                            android:orientation="horizontal"
+                            app:flexDirection="row"
+                            app:justifyContent="space_between"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/weather_info_label">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Độ ẩm đất bật"
+                                android:textSize="16dp"></TextView>
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Độ ẩm đất tắt"
+                                android:textSize="16dp"></TextView>
+                        </com.google.android.flexbox.FlexboxLayout>
+
+                        <com.google.android.flexbox.FlexboxLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="15dp"
+                            android:orientation="horizontal"
+                            app:flexDirection="row"
+                            app:justifyContent="space_between"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/weather_info_label">
+
+                            <EditText
+                                android:id="@+id/water_onValue"
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="25dp"
+                                android:gravity="center"></EditText>
+
+                            <EditText
+                                android:id="@+id/water_offValue"
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="25dp"
+                                android:gravity="center"></EditText>
+                        </com.google.android.flexbox.FlexboxLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:text="Lặp lại theo giờ"
+                            android:textSize="18dp"></TextView>
+
+                        <com.google.android.flexbox.FlexboxLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="15dp"
+                            android:orientation="horizontal"
+                            app:flexDirection="row"
+                            app:justifyContent="space_between"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/weather_info_label">
+                            <Switch
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:thumb="@drawable/thumb"
+                                android:track="@drawable/track"
+                                android:visibility="invisible"></Switch>
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Thời gian bật"
+                                android:textSize="16dp"></TextView>
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Thời gian tắt"
+                                android:textSize="16dp"></TextView>
+                        </com.google.android.flexbox.FlexboxLayout>
+
+                        <com.google.android.flexbox.FlexboxLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="15dp"
+                            android:orientation="horizontal"
+                            app:flexDirection="row"
+                            app:justifyContent="space_between"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/weather_info_label">
+
+                            <Switch
+                                android:id="@+id/water_timer1_bttn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:thumb="@drawable/thumb"
+                                android:track="@drawable/track"></Switch>
+
+                            <EditText
+                                android:id="@+id/water_timer1_on"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="25dp"
+                                android:gravity="center"></EditText>
+
+                            <EditText
+                                android:id="@+id/water_timer1_off"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="25dp"
+                                android:gravity="center"></EditText>
+                        </com.google.android.flexbox.FlexboxLayout>
+
+                        <com.google.android.flexbox.FlexboxLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="15dp"
+                            android:orientation="horizontal"
+                            app:flexDirection="row"
+                            app:justifyContent="space_between"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/weather_info_label">
+
+                            <Switch
+                                android:id="@+id/water_timer2_bttn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:thumb="@drawable/thumb"
+                                android:track="@drawable/track"></Switch>
+
+                            <EditText
+                                android:id="@+id/water_timer2_on"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="25dp"
+                                android:gravity="center"></EditText>
+
+                            <EditText
+                                android:id="@+id/water_timer2_off"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="25dp"
+                                android:gravity="center"></EditText>
+                        </com.google.android.flexbox.FlexboxLayout>
+
+                        <com.google.android.flexbox.FlexboxLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="15dp"
+                            android:orientation="horizontal"
+                            app:flexDirection="row"
+                            app:justifyContent="space_between"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/weather_info_label">
+
+                            <Switch
+                                android:id="@+id/water_timer3_bttn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:thumb="@drawable/thumb"
+                                android:track="@drawable/track"></Switch>
+
+                            <EditText
+                                android:id="@+id/water_timer3_on"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="25dp"
+                                android:gravity="center"></EditText>
+
+                            <EditText
+                                android:id="@+id/water_timer3_off"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="25dp"
+                                android:gravity="center"></EditText>
+                        </com.google.android.flexbox.FlexboxLayout>
+                        <Button
+                            android:id="@+id/water_timer_save_bttn"
+                            android:layout_width="170dp"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:backgroundTint="@color/sea_green"
+                            android:textSize="20dp"
+                            android:text="Lưu thay đổi"
+                            android:layout_gravity="center"></Button>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"></com.google.android.material.divider.MaterialDivider>
+
+                <!--            <com.google.android.flexbox.FlexboxLayout-->
+                <!--                android:id="@+id/light_dropdown_bttn"-->
+                <!--                android:layout_width="match_parent"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:layout_marginStart="15dp"-->
+                <!--                android:layout_marginEnd="15dp"-->
+                <!--                android:orientation="horizontal"-->
+                <!--                app:flexDirection="row"-->
+                <!--                app:justifyContent="space_between">-->
+                <!--                <TextView-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:text="Cắt nắng"-->
+                <!--                    android:textSize="20dp"></TextView>-->
+
+                <!--                <ImageView-->
+                <!--                    android:layout_width="20dp"-->
+                <!--                    android:layout_height="20dp"-->
+                <!--                    android:src="@drawable/dropdown_icon"></ImageView>-->
+                <!--            </com.google.android.flexbox.FlexboxLayout>-->
+
+                <!--            <androidx.cardview.widget.CardView-->
+                <!--                android:id="@+id/light_dropdown"-->
+                <!--                android:layout_width="match_parent"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:layout_marginTop="10dp"-->
+                <!--                android:layout_marginStart="20dp"-->
+                <!--                android:layout_marginEnd="20dp"-->
+                <!--                android:backgroundTint="@color/white"-->
+                <!--                app:cardCornerRadius="10dp"-->
+                <!--                android:visibility="gone">-->
+
+                <!--                <LinearLayout-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:orientation="vertical">-->
+
+                <!--                    <com.google.android.flexbox.FlexboxLayout-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_marginStart="15dp"-->
+                <!--                        android:layout_marginTop="10dp"-->
+                <!--                        android:layout_marginEnd="15dp"-->
+                <!--                        android:orientation="horizontal"-->
+                <!--                        app:flexDirection="row"-->
+                <!--                        app:justifyContent="space_between"-->
+                <!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                <!--                        app:layout_constraintTop_toBottomOf="@id/weather_info_label">-->
+
+                <!--                        <TextView-->
+                <!--                            android:layout_width="wrap_content"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:text="Đặt giá trị biên"-->
+                <!--                            android:textSize="18dp"></TextView>-->
+
+                <!--                        <Switch-->
+                <!--                            android:layout_width="wrap_content"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:thumb="@drawable/thumb"-->
+                <!--                            android:track="@drawable/track"></Switch>-->
+                <!--                    </com.google.android.flexbox.FlexboxLayout>-->
+
+                <!--                    <com.google.android.flexbox.FlexboxLayout-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_marginStart="15dp"-->
+                <!--                        android:layout_marginTop="10dp"-->
+                <!--                        android:layout_marginEnd="15dp"-->
+                <!--                        android:orientation="horizontal"-->
+                <!--                        app:flexDirection="row"-->
+                <!--                        app:justifyContent="space_between"-->
+                <!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                <!--                        app:layout_constraintTop_toBottomOf="@id/weather_info_label">-->
+
+                <!--                        <TextView-->
+                <!--                            android:layout_width="150dp"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:gravity="center"-->
+                <!--                            android:text="Nhiệt độ bật"-->
+                <!--                            android:textSize="16dp"></TextView>-->
+
+                <!--                        <TextView-->
+                <!--                            android:layout_width="150dp"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:gravity="center"-->
+                <!--                            android:text="Nhiệt độ tắt"-->
+                <!--                            android:textSize="16dp"></TextView>-->
+                <!--                    </com.google.android.flexbox.FlexboxLayout>-->
+
+                <!--                    <com.google.android.flexbox.FlexboxLayout-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_marginStart="15dp"-->
+                <!--                        android:layout_marginTop="10dp"-->
+                <!--                        android:layout_marginEnd="15dp"-->
+                <!--                        android:orientation="horizontal"-->
+                <!--                        app:flexDirection="row"-->
+                <!--                        app:justifyContent="space_between"-->
+                <!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                <!--                        app:layout_constraintTop_toBottomOf="@id/weather_info_label">-->
+
+                <!--                        <EditText-->
+                <!--                            android:layout_width="150dp"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:textColor="@color/black"-->
+                <!--                            android:textSize="16dp"-->
+                <!--                            android:gravity="center"></EditText>-->
+
+                <!--                        <EditText-->
+                <!--                            android:layout_width="150dp"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:textColor="@color/black"-->
+                <!--                            android:textSize="16dp"-->
+                <!--                            android:gravity="center"></EditText>-->
+                <!--                    </com.google.android.flexbox.FlexboxLayout>-->
+
+                <!--                    <TextView-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_marginStart="15dp"-->
+                <!--                        android:text="Lặp lại theo giờ"-->
+                <!--                        android:textSize="18dp"></TextView>-->
+
+                <!--                    <com.google.android.flexbox.FlexboxLayout-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_marginStart="15dp"-->
+                <!--                        android:layout_marginTop="10dp"-->
+                <!--                        android:layout_marginEnd="15dp"-->
+                <!--                        android:orientation="horizontal"-->
+                <!--                        app:flexDirection="row"-->
+                <!--                        app:justifyContent="space_between"-->
+                <!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                <!--                        app:layout_constraintTop_toBottomOf="@id/weather_info_label">-->
+                <!--                        <Switch-->
+                <!--                            android:layout_width="wrap_content"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:layout_marginTop="10dp"-->
+                <!--                            android:thumb="@drawable/thumb"-->
+                <!--                            android:track="@drawable/track"-->
+                <!--                            android:visibility="invisible"></Switch>-->
+                <!--                        <TextView-->
+                <!--                            android:layout_width="100dp"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:gravity="center"-->
+                <!--                            android:text="Thời gian bật"-->
+                <!--                            android:textSize="16dp"></TextView>-->
+
+                <!--                        <TextView-->
+                <!--                            android:layout_width="100dp"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:gravity="center"-->
+                <!--                            android:text="Thời gian tắt"-->
+                <!--                            android:textSize="16dp"></TextView>-->
+                <!--                    </com.google.android.flexbox.FlexboxLayout>-->
+
+                <!--                    <com.google.android.flexbox.FlexboxLayout-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_marginStart="15dp"-->
+                <!--                        android:layout_marginTop="10dp"-->
+                <!--                        android:layout_marginEnd="15dp"-->
+                <!--                        android:orientation="horizontal"-->
+                <!--                        app:flexDirection="row"-->
+                <!--                        app:justifyContent="space_between"-->
+                <!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                <!--                        app:layout_constraintTop_toBottomOf="@id/weather_info_label">-->
+
+                <!--                        <Switch-->
+                <!--                            android:layout_width="wrap_content"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:layout_marginTop="10dp"-->
+                <!--                            android:thumb="@drawable/thumb"-->
+                <!--                            android:track="@drawable/track"></Switch>-->
+
+                <!--                        <EditText-->
+                <!--                            android:layout_width="100dp"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:textColor="@color/black"-->
+                <!--                            android:textSize="16dp"-->
+                <!--                            android:gravity="center"></EditText>-->
+
+                <!--                        <EditText-->
+                <!--                            android:layout_width="100dp"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:textColor="@color/black"-->
+                <!--                            android:textSize="16dp"-->
+                <!--                            android:gravity="center"></EditText>-->
+                <!--                    </com.google.android.flexbox.FlexboxLayout>-->
+
+                <!--                    <com.google.android.flexbox.FlexboxLayout-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_marginStart="15dp"-->
+                <!--                        android:layout_marginTop="10dp"-->
+                <!--                        android:layout_marginEnd="15dp"-->
+                <!--                        android:orientation="horizontal"-->
+                <!--                        app:flexDirection="row"-->
+                <!--                        app:justifyContent="space_between"-->
+                <!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                <!--                        app:layout_constraintTop_toBottomOf="@id/weather_info_label">-->
+
+                <!--                        <Switch-->
+                <!--                            android:layout_width="wrap_content"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:layout_marginTop="10dp"-->
+                <!--                            android:thumb="@drawable/thumb"-->
+                <!--                            android:track="@drawable/track"></Switch>-->
+
+                <!--                        <EditText-->
+                <!--                            android:layout_width="100dp"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:textColor="@color/black"-->
+                <!--                            android:textSize="16dp"-->
+                <!--                            android:gravity="center"></EditText>-->
+
+                <!--                        <EditText-->
+                <!--                            android:layout_width="100dp"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:textColor="@color/black"-->
+                <!--                            android:textSize="16dp"-->
+                <!--                            android:gravity="center"></EditText>-->
+                <!--                    </com.google.android.flexbox.FlexboxLayout>-->
+
+                <!--                    <com.google.android.flexbox.FlexboxLayout-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_marginStart="15dp"-->
+                <!--                        android:layout_marginTop="10dp"-->
+                <!--                        android:layout_marginEnd="15dp"-->
+                <!--                        android:orientation="horizontal"-->
+                <!--                        app:flexDirection="row"-->
+                <!--                        app:justifyContent="space_between"-->
+                <!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                <!--                        app:layout_constraintTop_toBottomOf="@id/weather_info_label">-->
+
+                <!--                        <Switch-->
+                <!--                            android:layout_width="wrap_content"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:layout_marginTop="10dp"-->
+                <!--                            android:thumb="@drawable/thumb"-->
+                <!--                            android:track="@drawable/track"></Switch>-->
+
+                <!--                        <EditText-->
+                <!--                            android:layout_width="100dp"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:textColor="@color/black"-->
+                <!--                            android:textSize="16dp"-->
+                <!--                            android:gravity="center"></EditText>-->
+
+                <!--                        <EditText-->
+                <!--                            android:layout_width="100dp"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:textColor="@color/black"-->
+                <!--                            android:textSize="16dp"-->
+                <!--                            android:gravity="center"></EditText>-->
+                <!--                    </com.google.android.flexbox.FlexboxLayout>-->
+                <!--                    <Button-->
+                <!--                        android:id="@+id/light_timer_save_bttn"-->
+                <!--                        android:layout_width="170dp"-->
+                <!--                        android:layout_height="60dp"-->
+                <!--                        android:layout_marginTop="10dp"-->
+                <!--                        android:layout_marginBottom="10dp"-->
+                <!--                        android:backgroundTint="@color/sea_green"-->
+                <!--                        android:textSize="20dp"-->
+                <!--                        android:text="Lưu thay đổi"-->
+                <!--                        android:layout_gravity="center"></Button>-->
+                <!--                </LinearLayout>-->
+                <!--            </androidx.cardview.widget.CardView>-->
+                <!--            <com.google.android.material.divider.MaterialDivider-->
+                <!--                android:layout_width="match_parent"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:layout_marginStart="15dp"-->
+                <!--                android:layout_marginEnd="15dp"-->
+                <!--                android:layout_marginTop="10dp"-->
+                <!--                android:layout_marginBottom="10dp"></com.google.android.material.divider.MaterialDivider>-->
+                <!--            <com.google.android.flexbox.FlexboxLayout-->
+                <!--                android:id="@+id/isult_dropdown_bttn"-->
+                <!--                android:layout_width="match_parent"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:layout_marginStart="15dp"-->
+                <!--                android:layout_marginEnd="15dp"-->
+                <!--                android:orientation="horizontal"-->
+                <!--                app:flexDirection="row"-->
+                <!--                app:justifyContent="space_between">-->
+                <!--                <TextView-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:text="Bảo ôn"-->
+                <!--                    android:textSize="20dp"></TextView>-->
+
+                <!--                <ImageView-->
+                <!--                    android:layout_width="20dp"-->
+                <!--                    android:layout_height="20dp"-->
+                <!--                    android:src="@drawable/dropdown_icon"></ImageView>-->
+                <!--            </com.google.android.flexbox.FlexboxLayout>-->
+                <!--            <androidx.cardview.widget.CardView-->
+                <!--                android:id="@+id/isult_dropdown"-->
+                <!--                android:layout_width="match_parent"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:layout_marginTop="10dp"-->
+                <!--                android:layout_marginBottom="20dp"-->
+                <!--                android:layout_marginStart="20dp"-->
+                <!--                android:layout_marginEnd="20dp"-->
+                <!--                android:backgroundTint="@color/white"-->
+                <!--                app:cardCornerRadius="10dp"-->
+                <!--                android:visibility="gone">-->
+
+                <!--                <LinearLayout-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:orientation="vertical">-->
+
+                <!--                    <com.google.android.flexbox.FlexboxLayout-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_marginStart="15dp"-->
+                <!--                        android:layout_marginTop="10dp"-->
+                <!--                        android:layout_marginEnd="15dp"-->
+                <!--                        android:orientation="horizontal"-->
+                <!--                        app:flexDirection="row"-->
+                <!--                        app:justifyContent="space_between"-->
+                <!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                <!--                        app:layout_constraintTop_toBottomOf="@id/weather_info_label">-->
+
+                <!--                        <TextView-->
+                <!--                            android:layout_width="wrap_content"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:text="Đặt giá trị biên"-->
+                <!--                            android:textSize="18dp"></TextView>-->
+
+                <!--                        <Switch-->
+                <!--                            android:layout_width="wrap_content"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:thumb="@drawable/thumb"-->
+                <!--                            android:track="@drawable/track"></Switch>-->
+                <!--                    </com.google.android.flexbox.FlexboxLayout>-->
+
+                <!--                    <com.google.android.flexbox.FlexboxLayout-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_marginStart="15dp"-->
+                <!--                        android:layout_marginTop="10dp"-->
+                <!--                        android:layout_marginEnd="15dp"-->
+                <!--                        android:orientation="horizontal"-->
+                <!--                        app:flexDirection="row"-->
+                <!--                        app:justifyContent="space_between"-->
+                <!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                <!--                        app:layout_constraintTop_toBottomOf="@id/weather_info_label">-->
+
+                <!--                        <TextView-->
+                <!--                            android:layout_width="150dp"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:gravity="center"-->
+                <!--                            android:text="Nhiệt độ bật"-->
+                <!--                            android:textSize="16dp"></TextView>-->
+
+                <!--                        <TextView-->
+                <!--                            android:layout_width="150dp"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:gravity="center"-->
+                <!--                            android:text="Nhiệt độ tắt"-->
+                <!--                            android:textSize="16dp"></TextView>-->
+                <!--                    </com.google.android.flexbox.FlexboxLayout>-->
+
+                <!--                    <com.google.android.flexbox.FlexboxLayout-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_marginStart="15dp"-->
+                <!--                        android:layout_marginTop="10dp"-->
+                <!--                        android:layout_marginEnd="15dp"-->
+                <!--                        android:orientation="horizontal"-->
+                <!--                        app:flexDirection="row"-->
+                <!--                        app:justifyContent="space_between"-->
+                <!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                <!--                        app:layout_constraintTop_toBottomOf="@id/weather_info_label">-->
+
+                <!--                        <EditText-->
+                <!--                            android:layout_width="150dp"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:textColor="@color/black"-->
+                <!--                            android:textSize="16dp"-->
+                <!--                            android:gravity="center"></EditText>-->
+
+                <!--                        <EditText-->
+                <!--                            android:layout_width="150dp"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:textColor="@color/black"-->
+                <!--                            android:textSize="16dp"-->
+                <!--                            android:gravity="center"></EditText>-->
+                <!--                    </com.google.android.flexbox.FlexboxLayout>-->
+
+                <!--                    <TextView-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_marginStart="15dp"-->
+                <!--                        android:text="Lặp lại theo giờ"-->
+                <!--                        android:textSize="18dp"></TextView>-->
+
+                <!--                    <com.google.android.flexbox.FlexboxLayout-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_marginStart="15dp"-->
+                <!--                        android:layout_marginTop="10dp"-->
+                <!--                        android:layout_marginEnd="15dp"-->
+                <!--                        android:orientation="horizontal"-->
+                <!--                        app:flexDirection="row"-->
+                <!--                        app:justifyContent="space_between"-->
+                <!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                <!--                        app:layout_constraintTop_toBottomOf="@id/weather_info_label">-->
+                <!--                        <Switch-->
+                <!--                            android:layout_width="wrap_content"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:layout_marginTop="10dp"-->
+                <!--                            android:thumb="@drawable/thumb"-->
+                <!--                            android:track="@drawable/track"-->
+                <!--                            android:visibility="invisible"></Switch>-->
+                <!--                        <TextView-->
+                <!--                            android:layout_width="100dp"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:gravity="center"-->
+                <!--                            android:text="Thời gian bật"-->
+                <!--                            android:textSize="16dp"></TextView>-->
+
+                <!--                        <TextView-->
+                <!--                            android:layout_width="100dp"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:gravity="center"-->
+                <!--                            android:text="Thời gian tắt"-->
+                <!--                            android:textSize="16dp"></TextView>-->
+                <!--                    </com.google.android.flexbox.FlexboxLayout>-->
+
+                <!--                    <com.google.android.flexbox.FlexboxLayout-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_marginStart="15dp"-->
+                <!--                        android:layout_marginTop="10dp"-->
+                <!--                        android:layout_marginEnd="15dp"-->
+                <!--                        android:orientation="horizontal"-->
+                <!--                        app:flexDirection="row"-->
+                <!--                        app:justifyContent="space_between"-->
+                <!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                <!--                        app:layout_constraintTop_toBottomOf="@id/weather_info_label">-->
+
+                <!--                        <Switch-->
+                <!--                            android:layout_width="wrap_content"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:layout_marginTop="10dp"-->
+                <!--                            android:thumb="@drawable/thumb"-->
+                <!--                            android:track="@drawable/track"></Switch>-->
+
+                <!--                        <EditText-->
+                <!--                            android:layout_width="100dp"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:textColor="@color/black"-->
+                <!--                            android:textSize="16dp"-->
+                <!--                            android:gravity="center"></EditText>-->
+
+                <!--                        <EditText-->
+                <!--                            android:layout_width="100dp"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:textColor="@color/black"-->
+                <!--                            android:textSize="16dp"-->
+                <!--                            android:gravity="center"></EditText>-->
+                <!--                    </com.google.android.flexbox.FlexboxLayout>-->
+
+                <!--                    <com.google.android.flexbox.FlexboxLayout-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_marginStart="15dp"-->
+                <!--                        android:layout_marginTop="10dp"-->
+                <!--                        android:layout_marginEnd="15dp"-->
+                <!--                        android:orientation="horizontal"-->
+                <!--                        app:flexDirection="row"-->
+                <!--                        app:justifyContent="space_between"-->
+                <!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                <!--                        app:layout_constraintTop_toBottomOf="@id/weather_info_label">-->
+
+                <!--                        <Switch-->
+                <!--                            android:layout_width="wrap_content"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:layout_marginTop="10dp"-->
+                <!--                            android:thumb="@drawable/thumb"-->
+                <!--                            android:track="@drawable/track"></Switch>-->
+
+                <!--                        <EditText-->
+                <!--                            android:layout_width="100dp"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:textColor="@color/black"-->
+                <!--                            android:textSize="16dp"-->
+                <!--                            android:gravity="center"></EditText>-->
+
+                <!--                        <EditText-->
+                <!--                            android:layout_width="100dp"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:textColor="@color/black"-->
+                <!--                            android:textSize="16dp"-->
+                <!--                            android:gravity="center"></EditText>-->
+                <!--                    </com.google.android.flexbox.FlexboxLayout>-->
+
+                <!--                    <com.google.android.flexbox.FlexboxLayout-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_marginStart="15dp"-->
+                <!--                        android:layout_marginTop="10dp"-->
+                <!--                        android:layout_marginEnd="15dp"-->
+                <!--                        android:orientation="horizontal"-->
+                <!--                        app:flexDirection="row"-->
+                <!--                        app:justifyContent="space_between"-->
+                <!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                <!--                        app:layout_constraintTop_toBottomOf="@id/weather_info_label">-->
+
+                <!--                        <Switch-->
+                <!--                            android:layout_width="wrap_content"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:layout_marginTop="10dp"-->
+                <!--                            android:thumb="@drawable/thumb"-->
+                <!--                            android:track="@drawable/track"></Switch>-->
+
+                <!--                        <EditText-->
+                <!--                            android:layout_width="100dp"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:textColor="@color/black"-->
+                <!--                            android:textSize="16dp"-->
+                <!--                            android:gravity="center"></EditText>-->
+
+                <!--                        <EditText-->
+                <!--                            android:layout_width="100dp"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:textColor="@color/black"-->
+                <!--                            android:textSize="16dp"-->
+                <!--                            android:gravity="center"></EditText>-->
+                <!--                    </com.google.android.flexbox.FlexboxLayout>-->
+                <!--                    <Button-->
+                <!--                        android:id="@+id/isult_timer_save_bttn"-->
+                <!--                        android:layout_width="170dp"-->
+                <!--                        android:layout_height="60dp"-->
+                <!--                        android:layout_marginTop="10dp"-->
+                <!--                        android:layout_marginBottom="10dp"-->
+                <!--                        android:backgroundTint="@color/sea_green"-->
+                <!--                        android:textSize="20dp"-->
+                <!--                        android:text="Lưu thay đổi"-->
+                <!--                        android:layout_gravity="center"></Button>-->
+                <!--                </LinearLayout>-->
+                <!--            </androidx.cardview.widget.CardView>-->
+                <!--            <com.google.android.material.divider.MaterialDivider-->
+                <!--                android:layout_width="match_parent"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:layout_marginStart="15dp"-->
+                <!--                android:layout_marginEnd="15dp"-->
+                <!--                android:layout_marginTop="10dp"-->
+                <!--                android:layout_marginBottom="10dp"></com.google.android.material.divider.MaterialDivider>-->
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
